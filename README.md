@@ -9,6 +9,7 @@ Developement of tasklist using angular 6 with Material Design and Spring boot fo
 - Node Server
 - Maven (dependencies)
 - Yarn
+- MySQL
 
 ------
 
