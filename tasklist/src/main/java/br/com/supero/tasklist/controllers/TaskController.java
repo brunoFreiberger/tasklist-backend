@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.supero.tasklist.models.Task;
@@ -39,7 +38,7 @@ public class TaskController {
 	}
 
 	/**
-	 * Return all tasks
+	 * Return all tasks (todo and completed)
 	 * 
 	 * @return all tasks in database
 	 */
@@ -50,9 +49,9 @@ public class TaskController {
 	}
 	
 	/**
-	 * Change the order for the tasks
+	 * Change the order of tasks
 	 * 
-	 * @param tasks tasks in order
+	 * @param tasks 
 	 * @return HttpStatus
 	 */
 	@PostMapping(path = "/saveOrder")
@@ -68,7 +67,7 @@ public class TaskController {
 	/**
 	 * Delete the tasks
 	 * 
-	 * @param id of task
+	 * @param id
 	 * @return HttpStatus
 	 */
 	@PostMapping(path = "/delete/{id}")

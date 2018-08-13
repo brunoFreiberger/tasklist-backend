@@ -29,11 +29,11 @@ Developement of tasklist using angular 6 with Material Design and Spring boot fo
 
 # How to run:
 
-# Frontend
+Frontend
 1. After clone, Run yarn install or npm install for install dependencies
 2. After you have downloaded dependencies, run yarn start or npm start
 
-# Backend
+Backend
 1. After clone, Import Maven Project
 2. Maven -> Update Maven Project for download dependencies
 3. Run TasklistApplication.java
@@ -41,6 +41,7 @@ Developement of tasklist using angular 6 with Material Design and Spring boot fo
 ------
 
 # Demo
-
+![Alt text] (https://github.com/brunoFreiberger/tasklist-backend/blob/master/demo/tasklist-working.gif)
 
 # Reponsivity
+![Alt text] (https://github.com/brunoFreiberger/tasklist-backend/blob/master/demo/tasklist-responsive.PNG)
