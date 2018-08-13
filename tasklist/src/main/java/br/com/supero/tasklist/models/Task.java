@@ -25,6 +25,9 @@ public class Task {
 	@Column(name = "title")
 	private String title;
 	
+	@Column(name = "priority")
+	private Integer priority;
+	
 	@Column(name = "creation_date")
 	private Date creationDate;
 	
@@ -67,6 +70,14 @@ public class Task {
 	}
 	public void setCompleted(Boolean completed) {
 		this.completed = completed;
+	}
+
+	public Integer getPriority() {
+		return priority;
+	}
+
+	public void setPriority(Integer priority) {
+		this.priority = priority;
 	}
 	
 }

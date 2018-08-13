@@ -1,14 +1,14 @@
 package br.com.supero.tasklist.controllers;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,7 +34,7 @@ public class TaskController {
 	 * @return HttpStatus
 	 */
 	@PostMapping(path = "/save")
-	public @ResponseBody Task save(@RequestParam Task task) {
+	public @ResponseBody Task save(@RequestBody Task task) {
 		return this.taskRepository.save(task);
 	}
 
@@ -46,7 +46,7 @@ public class TaskController {
 	@GetMapping(path = "/all")
 	public @ResponseBody Iterable<Task> getAllTasks() {
 		// This returns a JSON or XML with the tasks
-		return this.taskRepository.findAll();
+		return this.taskRepository.getAllTasks();
 	}
 	
 	/**
@@ -55,8 +55,8 @@ public class TaskController {
 	 * @param tasks tasks in order
 	 * @return HttpStatus
 	 */
-	@GetMapping(path = "/saveOrder")
-	public @ResponseBody HttpStatus saveOrder(@RequestParam List<Task> tasks) {
+	@PostMapping(path = "/saveOrder")
+	public @ResponseBody HttpStatus saveOrder(@RequestBody List<Task> tasks) {
 		Integer order = 0;
 		for(Task task : tasks) {
 			task.setOrderTask(order++);
@@ -71,8 +71,8 @@ public class TaskController {
 	 * @param id of task
 	 * @return HttpStatus
 	 */
-	@PostMapping(path = "/delete")
-	public @ResponseBody HttpStatus remove(@RequestParam Long id) {
+	@PostMapping(path = "/delete/{id}")
+	public @ResponseBody HttpStatus remove(@PathVariable Long id) {
 		this.taskRepository.deleteById(id);
 		return HttpStatus.OK;
 	}
