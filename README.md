@@ -41,7 +41,7 @@ Backend
 ------
 
 # Demo
-![Alt text] (https://github.com/brunoFreiberger/tasklist-backend/blob/master/demo/tasklist-working.gif)
+![Alt text](https://github.com/brunoFreiberger/tasklist-backend/blob/master/demo/tasklist-working.gif)
 
 # Reponsivity
-![Alt text] (https://github.com/brunoFreiberger/tasklist-backend/blob/master/demo/tasklist-responsive.PNG)
+![Alt text](https://github.com/brunoFreiberger/tasklist-backend/blob/master/demo/tasklist-responsive.PNG)
